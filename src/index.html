@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Arden Zeng’s engineering portfolio: semiconductor research, hardware projects, embedded systems, and software."
+    />
+    <meta name="theme-color" content="#09100f" />
+    <title>Arden Zeng — Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Arden Zeng, home">
+        <span class="brand-mark" aria-hidden="true">AZ</span>
+        <span class="brand-label">arden.zeng</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#biography">Biography</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#coursework">Coursework</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M18.36 5.64l-1.42 1.42M7.06 16.94l-1.42 1.42" />
+          <circle cx="12" cy="12" r="4" />
+        </svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top" data-observe>
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-profile="eyebrow"></p>
+          <h1 data-profile="headline"></h1>
+          <p class="hero-intro" data-profile="introduction"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore my work
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>
+            </a>
+            <a class="text-link" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Abstract animated circuit diagram">
+          <div class="signal-card">
+            <div class="signal-card-top">
+              <span>FIELD_NOTE / 001</span>
+              <span class="live-indicator"><i></i> BUILDING</span>
+            </div>
+            <svg class="circuit" viewBox="0 0 560 430" role="img" aria-label="A schematic connecting light, semiconductor, control, and code">
+              <defs>
+                <linearGradient id="trace" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="var(--cyan)" />
+                  <stop offset="1" stop-color="var(--amber)" />
+                </linearGradient>
+              </defs>
+              <path class="trace trace-1" d="M44 92H180V176H286V102H510" />
+              <path class="trace trace-2" d="M44 322H144V248H238V342H510" />
+              <path class="trace trace-3" d="M286 176V248H404V212H510" />
+              <g class="nodes">
+                <circle cx="44" cy="92" r="7" />
+                <circle cx="180" cy="176" r="7" />
+                <circle cx="286" cy="102" r="7" />
+                <circle cx="510" cy="102" r="7" />
+                <circle cx="44" cy="322" r="7" />
+                <circle cx="144" cy="248" r="7" />
+                <circle cx="238" cy="342" r="7" />
+                <circle cx="510" cy="342" r="7" />
+                <circle cx="404" cy="212" r="7" />
+                <circle cx="510" cy="212" r="7" />
+              </g>
+              <g class="circuit-labels">
+                <text x="44" y="72">LIGHT</text>
+                <text x="238" y="82">DEVICE</text>
+                <text x="44" y="302">CONTROL</text>
+                <text x="238" y="372">HARDWARE</text>
+                <text x="432" y="192">CODE</text>
+              </g>
+              <circle class="pulse pulse-a" cx="44" cy="92" r="5" />
+              <circle class="pulse pulse-b" cx="44" cy="322" r="5" />
+            </svg>
+            <div class="signal-card-bottom">
+              <span>HARDWARE × SOFTWARE</span>
+              <span>PRINCETON, NJ</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section-shell section-rule" id="biography" data-observe>
+        <div class="section-kicker reveal">
+          <span>01</span>
+          <p>Biography</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-lead reveal">
+            <p class="overline">My direction</p>
+            <h2>I want to understand the device—and build the system around it.</h2>
+          </div>
+          <div class="about-body reveal">
+            <p>
+              My interests span the stack: from how materials and semiconductor devices behave, to the circuits, controls, and software that turn them into useful systems.
+            </p>
+            <p>
+              Right now, I’m building practical experience through semiconductor research, lab automation, coursework, and independent hardware projects.
+            </p>
+            <div class="availability"><span></span><p data-profile="availability"></p></div>
+          </div>
+        </div>
+        <div class="focus-grid" data-focus-grid></div>
+      </section>
+
+      <section class="work section-shell section-rule" data-observe>
+        <div id="projects" class="anchor-target"></div>
+        <div class="section-kicker reveal">
+          <span>02</span>
+          <p>Selected work</p>
+        </div>
+        <div class="work-heading reveal">
+          <div>
+            <p class="overline">Projects</p>
+            <h2>Engineering in progress.</h2>
+          </div>
+          <p class="section-note">Select a project to inspect the problem, approach, and current status.</p>
+        </div>
+
+        <div class="project-toolbar reveal" aria-label="Filter projects">
+          <div class="filter-group" role="group" aria-label="Project category">
+            <button class="filter-button is-active" type="button" data-filter="All">All</button>
+            <button class="filter-button" type="button" data-filter="Research">Research</button>
+            <button class="filter-button" type="button" data-filter="Hardware">Hardware</button>
+          </div>
+          <p><span data-project-count>0</span> projects</p>
+        </div>
+        <div class="project-grid" data-project-grid aria-live="polite"></div>
+
+        <div id="experience" class="anchor-target"></div>
+        <div class="experience-block">
+          <div class="experience-heading reveal">
+            <p class="overline">Experience</p>
+            <h2>Learning by building and teaching.</h2>
+          </div>
+          <div class="experience-list" data-experience-list></div>
+        </div>
+      </section>
+
+      <section class="foundation section-shell section-rule" data-observe>
+        <div class="section-kicker reveal">
+          <span>03</span>
+          <p>Foundation + contact</p>
+        </div>
+        <div class="foundation-grid">
+          <div id="coursework" class="coursework-panel reveal anchor-target">
+            <p class="overline">Coursework</p>
+            <h2>A technical base built for the work ahead.</h2>
+            <div class="coursework-list" data-coursework-list></div>
+            <div class="interest-line">
+              <span>FOCUS</span>
+              <p>Semiconductor devices · chip design · embedded systems · lab automation</p>
+            </div>
+          </div>
+
+          <div id="contact" class="contact-panel reveal anchor-target">
+            <p class="overline">Contact</p>
+            <h2>Let’s build something useful.</h2>
+            <p>
+              I’m interested in opportunities where I can learn quickly and contribute across hardware, semiconductor, or embedded engineering.
+            </p>
+            <div class="contact-list" data-contact-list></div>
+            <p class="contact-note">Contact links are marked for completion—no personal address was guessed.</p>
+          </div>
+        </div>
+
+        <footer>
+          <p>© <span data-year></span> <span data-profile="name"></span></p>
+          <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </footer>
+      </section>
+    </main>
+
+    <dialog class="project-dialog" data-project-dialog>
+      <button class="dialog-close" type="button" aria-label="Close project details">×</button>
+      <div data-dialog-content></div>
+    </dialog>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+  </body>
+</html>
