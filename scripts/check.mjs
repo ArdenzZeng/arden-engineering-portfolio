@@ -19,7 +19,7 @@ for (const anchor of ["biography", "projects", "experience", "coursework", "cont
   if (!html.includes(`id=\"${anchor}\"`)) throw new Error(`Missing #${anchor}`);
 }
 
-for (const phrase of ["Optical Alignment Automation", "Custom Macro Pad", "ECE 206", "ECE 308"]) {
+for (const phrase of ["Optical Alignment Automation", "Custom Macro Pad"]) {
   if (!data.includes(phrase)) throw new Error(`Missing portfolio content: ${phrase}`);
 }
 

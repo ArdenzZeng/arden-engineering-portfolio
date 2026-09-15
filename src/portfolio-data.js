@@ -6,7 +6,7 @@ export const portfolio = {
     eyebrow: "Princeton University · Engineering Portfolio",
     headline: "Building at the boundary of hardware, light, and code.",
     introduction:
-      "I’m a Princeton undergraduate focused on electrical and computer engineering. I’m especially interested in semiconductor devices, chip design, embedded systems, and software that makes physical experiments more precise.",
+      "Hello! My name is Arden Zeng and I’m a Princeton undergraduate focused on electrical and computer engineering. I’m especially interested in semiconductor devices, chip design, and embedded systems.",
     availability: "Exploring engineering internships",
   },
 
@@ -83,29 +83,29 @@ export const portfolio = {
   coursework: [
     {
       label: "Current",
-      courses: ["ECE 206", "ECE 308"],
+      courses: ["Contemporary Logic Design", "Electronic and Photonic Devices"],
     },
     {
       label: "Foundation",
-      courses: ["EGR 151", "EGR 152", "CHM 201"],
+      courses: ["Linear Algebra", "Physics I", "Physics II", "Multivariable Calculus"],
     },
   ],
 
   contact: [
     {
       label: "Email",
-      value: "Add your preferred email",
-      href: "",
+      value: "arden.zeng@princeton.edu",
+      href: "mailto:arden.zeng@princeton.edu",
     },
     {
       label: "LinkedIn",
-      value: "Add your LinkedIn URL",
-      href: "",
+      value: "https://www.linkedin.com/in/ardenz/",
+      href: "https://www.linkedin.com/in/ardenz/",
     },
     {
       label: "GitHub",
-      value: "Add your GitHub URL",
-      href: "",
+      value: "https://github.com/ArdenzZeng",
+      href: "https://github.com/ArdenzZeng",
     },
   ],
 };

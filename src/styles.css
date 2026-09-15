@@ -252,8 +252,8 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
-  gap: clamp(50px, 8vw, 124px);
+  grid-template-columns: 1fr;
+  gap: 0;
   align-items: center;
   min-height: 100svh;
   padding-top: calc(var(--header-height) + 72px);
@@ -343,7 +343,7 @@ a {
 }
 
 .hero-visual {
-  position: relative;
+  display: none;
 }
 
 .signal-card {

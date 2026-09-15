@@ -195,31 +195,73 @@ function observeReveals() {
 }
 
 const navLinks = [...nav.querySelectorAll("a")];
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (!visible) return;
-    navLinks.forEach((link) => {
-      const pointsToGroup =
-        link.hash === `#${visible.target.id}` ||
-        (visible.target.classList.contains("work") && ["#projects", "#experience"].includes(link.hash)) ||
-        (visible.target.classList.contains("foundation") && ["#coursework", "#contact"].includes(link.hash));
-      link.classList.toggle("is-active", pointsToGroup);
-    });
-  },
-  { rootMargin: "-25% 0px -60%", threshold: [0.05, 0.25] },
-);
 
-document.querySelectorAll("main > section").forEach((section) => sectionObserver.observe(section));
+let activeFoundationLink = ["#coursework", "#contact"].includes(
+  window.location.hash,
+)
+  ? window.location.hash
+  : "#coursework";
+
+function setActiveNav(activeHash) {
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.hash === activeHash);
+  });
+}
+
+function getSectionTop(selector) {
+  const element = document.querySelector(selector);
+
+  return element.getBoundingClientRect().top + window.scrollY;
+}
+
+function updateActiveNavOnScroll() {
+  const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+
+  if (scrollPosition >= getSectionTop("#coursework")) {
+    setActiveNav(activeFoundationLink);
+  } else if (scrollPosition >= getSectionTop("#experience")) {
+    setActiveNav("#experience");
+  } else if (scrollPosition >= getSectionTop("#projects")) {
+    setActiveNav("#projects");
+  } else {
+    setActiveNav("#biography");
+  }
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (["#coursework", "#contact"].includes(link.hash)) {
+      activeFoundationLink = link.hash;
+    }
+
+    setActiveNav(link.hash);
+  });
+});
+
+window.addEventListener("hashchange", () => {
+  if (["#coursework", "#contact"].includes(window.location.hash)) {
+    activeFoundationLink = window.location.hash;
+  }
+
+  setActiveNav(window.location.hash);
+});
+
+window.addEventListener("scroll", updateActiveNavOnScroll, {
+  passive: true,
+});
+
+updateActiveNavOnScroll();
 
 window.addEventListener(
   "scroll",
   () => {
     header.classList.toggle("is-scrolled", window.scrollY > 24);
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    document.querySelector(".scroll-progress span").style.transform = `scaleX(${max ? window.scrollY / max : 0})`;
+
+    const max =
+      document.documentElement.scrollHeight - window.innerHeight;
+
+    document.querySelector(".scroll-progress span").style.transform =
+      `scaleX(${max ? window.scrollY / max : 0})`;
   },
   { passive: true },
 );
