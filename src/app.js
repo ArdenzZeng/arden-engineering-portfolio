@@ -120,7 +120,9 @@ document.querySelector("[data-coursework-list]").innerHTML = portfolio.coursewor
     (group) => `
       <div class="course-row">
         <span>${group.label}</span>
-        <div>${group.courses.map((course) => `<strong>${course}</strong>`).join("")}</div>
+        <ul>${group.courses
+          .map((course) => `<li><strong>${course.name}</strong><p>${course.description}</p></li>`)
+          .join("")}</ul>
       </div>
     `,
   )

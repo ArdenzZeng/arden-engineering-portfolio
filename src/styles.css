@@ -864,18 +864,28 @@ a {
   text-transform: uppercase;
 }
 
-.course-row div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
+.course-row ul {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .course-row strong {
+  display: inline-block;
   padding: 7px 10px;
   border: 1px solid var(--line);
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 400;
+}
+
+.course-row li p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .interest-line {

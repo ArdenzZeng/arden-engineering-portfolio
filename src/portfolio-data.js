@@ -30,20 +30,6 @@ export const portfolio = {
 
   projects: [
     {
-      id: "optical-alignment",
-      title: "Optical Alignment Automation",
-      category: "Research",
-      year: "Current",
-      status: "Active research",
-      summary:
-        "Developing an approach to automate positioning in a laser-based semiconductor experiment using motorized motion and software control.",
-      detail:
-        "The work targets a repetitive manual alignment step: adjusting optics so the laser reaches the semiconductor sample. I’m exploring motor control and a software interface that can make positioning more repeatable and efficient.",
-      context: "Quest Lab · Princeton University",
-      tags: ["Python", "Motor control", "Optical characterization"],
-      accent: "cyan",
-    },
-    {
       id: "macro-pad",
       title: "Custom Macro Pad",
       category: "Hardware",
@@ -61,15 +47,6 @@ export const portfolio = {
 
   experience: [
     {
-      period: "Current",
-      role: "Undergraduate Researcher",
-      organization: "Quest Lab · Princeton University",
-      bullets: [
-        "Working on automation for an optical setup used in semiconductor research.",
-        "Developing skills in motor control, Python, and experimental hardware–software integration.",
-      ],
-    },
-    {
       period: "Jun — Aug 2026",
       role: "Technology Instructor / Intern",
       organization: "Lavner Education · Cal Poly Pomona",
@@ -83,11 +60,42 @@ export const portfolio = {
   coursework: [
     {
       label: "Current",
-      courses: ["Contemporary Logic Design", "Electronic and Photonic Devices"],
+      courses: [
+        {
+          name: "Contemporary Logic Design",
+          description:
+            "Digital system design from Boolean logic and combinational circuits to sequential logic and finite-state machines, implemented in Verilog.",
+        },
+        {
+          name: "Electronic and Photonic Devices",
+          description:
+            "The physics of semiconductors and how it shapes diodes, transistors, LEDs, lasers, and photodetectors.",
+        },
+      ],
     },
     {
       label: "Foundation",
-      courses: ["Linear Algebra", "Physics I", "Physics II", "Multivariable Calculus"],
+      courses: [
+        {
+          name: "Linear Algebra",
+          description:
+            "Vector spaces, matrices, eigenvalues, and linear transformations, the language behind signals, circuits, and data.",
+        },
+        {
+          name: "Physics I",
+          description: "Classical mechanics: motion, forces, energy, momentum, and oscillations.",
+        },
+        {
+          name: "Physics II",
+          description:
+            "Electricity and magnetism: fields, potential, circuits, and electromagnetic waves.",
+        },
+        {
+          name: "Multivariable Calculus",
+          description:
+            "Partial derivatives, multiple integrals, and vector calculus for modeling physical systems in three dimensions.",
+        },
+      ],
     },
   ],
 

@@ -30,12 +30,12 @@ async function check(viewport, screenshot, mobile = false) {
     await page.locator('#site-nav a[href="#projects"]').click();
   }
 
-  await page.locator('[data-filter="Research"]').click();
+  await page.locator('[data-filter="Hardware"]').click();
   if ((await page.locator("[data-project-id]").count()) !== 1) {
     failures.push(`${mobile ? "mobile" : "desktop"} project filtering failed`);
   }
   await page.locator('[data-filter="All"]').click();
-  await page.locator('[data-project-id="optical-alignment"]').click();
+  await page.locator('[data-project-id="macro-pad"]').click();
   if (!(await page.locator("[data-project-dialog]").isVisible())) failures.push("project dialog did not open");
   await page.locator(".dialog-close").click();
 
