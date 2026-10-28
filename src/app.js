@@ -1,4 +1,4 @@
-import { portfolio } from "./portfolio-data.js";
+import { portfolio } from "./portfolio-data.js?v=2";
 
 const root = document.documentElement;
 const body = document.body;
