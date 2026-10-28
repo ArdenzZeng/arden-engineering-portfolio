@@ -618,6 +618,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
+  gap: 6px;
   margin-top: 28px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -1221,4 +1222,10 @@ footer p {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+.dialog-link {
+  display: inline-flex;
+  gap: 6px;
+  margin-top: 28px;
 }

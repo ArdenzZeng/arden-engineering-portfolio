@@ -84,6 +84,7 @@ function openProject(id) {
       <div><span>TIMELINE</span><p>${project.year}</p></div>
     </div>
     <div class="dialog-tags">${project.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
+    ${project.link ? `<a class="text-link dialog-link" href="${project.link.href}" target="_blank" rel="noreferrer">${project.link.label} <span aria-hidden="true">↗</span></a>` : ""}
   `;
   dialog.showModal();
   body.classList.add("dialog-open");

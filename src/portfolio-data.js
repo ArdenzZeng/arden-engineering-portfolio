@@ -43,6 +43,21 @@ export const portfolio = {
       tags: ["Altium Designer", "PCB design", "CAD + 3D printing"],
       accent: "amber",
     },
+    {
+      id: "rc-car",
+      title: "Wireless RC Car",
+      category: "Embedded",
+      year: "Completed",
+      status: "Built + demoed",
+      summary:
+        "An Arduino-based car driven by a custom joystick controller over a 2.4 GHz radio link, with smooth diagonal steering.",
+      detail:
+        "Two Arduino Nanos split the work: the handheld transmitter reads a joystick’s X/Y position and sends it over an nRF24L01 radio, and the car decodes each packet into speed and direction commands for two DC motors through an L298N driver. Joystick input maps to eight movement zones, including four diagonal glides, with a center deadzone to stop motor jitter. I wrote standalone test sketches for the motors, joystick, and radio to verify each part on its own before integrating the full system.",
+      context: "Personal project",
+      tags: ["Arduino / C++", "nRF24L01 radio", "Motor control", "Circuit design"],
+      accent: "cyan",
+      link: { label: "View code on GitHub", href: "https://github.com/ArdenzZeng/rc-car" },
+    },
   ],
 
   experience: [
