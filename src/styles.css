@@ -751,6 +751,14 @@ a {
   top: calc(var(--header-height) * -1);
 }
 
+/* The coursework and contact panels are visible content, so they can't be
+   shifted like the empty marker divs. Offset the jump-link scroll instead. */
+.coursework-panel.anchor-target,
+.contact-panel.anchor-target {
+  top: 0;
+  scroll-margin-top: var(--header-height);
+}
+
 .experience-block {
   margin-top: 160px;
 }
